@@ -81,7 +81,7 @@ bool fight() {
     return true;
 }
 
-int talk() {
+void talk() {
     int choice = 0;
 
     cout << "You move towards the ogre, knowing the delicacy of the situation. As you move " << endl;
@@ -92,8 +92,25 @@ int talk() {
     cout << "he reaching for?" << endl << endl;
     
     do {
-        
-    } while (choice < 1 & choice >2)
+        cout << "Do you take no chances and draw your sword to fight the oger? " << endl;
+        cout << "1 - The tension might kill you! Draw your sword!\n2 - Stay in control, but ready yourself!\n" << endl;
+        cout << "Your choice: ";
+        cin >> choice;
+    } while (choice < 1 & choice >2);
+
+    if (choice == 1) {
+        fight();
+    } else if (choice == 2) {
+        cout << endl << "You brace yourself for what happens next!  The ogre hand grabs something from his side," << endl;
+        cout << "but you can't see exactly what it is in the magical light.  It reflects and is shiny..." << endl;
+        cout << "it's half a necklace with the rune 'B' on it! The ogre hands it over to you, and says " << endl;
+        cout << "'Take this amulet for your travels; I have the other half, and you can summon my help any time!'" << endl;
+        cout << "The ogre pulls out from under his shirt another necklace with the rune 'F' on it and shows you." << endl;
+        cout << "You thank the ogre! He pulls you in for a warm ogre hug and says 'Thanks for being my neighbor, bestie!'" << endl;
+        cout << "Now you continue on your journey, assured that your new friend will always be with you to protect you!" << endl;
+    } else {
+        cout << "Something went wrong!" << endl;
+    }
 }
 
 int main() {
@@ -105,4 +122,6 @@ int main() {
     } else {
         talk();
     }
+
+    cout << endl << "THE END\n\n Thanks for going on this adventure with me!"<<endl;
 }

@@ -10,11 +10,7 @@ class Profile {
         std::vector<std::string> hobbies;
         
     public:
-        Profile(std::string new_name, int new_age, std::string new_city, std::string new_country, std::string new_pronouns  = "they/them") {
-            name = new_name;
-            age = new_age;
-            city = new_city;
-            country = new_country;
-            pronouns = new_pronouns;
-        }
+        Profile(std::string new_name, int new_age, std::string new_city, std::string new_country, std::string new_pronouns  = "they/them");
+        std::string view_profile();
+        void add_hobby(std::string new_hobby);
 };
